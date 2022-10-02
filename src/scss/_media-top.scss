@@ -1,0 +1,141 @@
+.media-top-outer {
+	position: relative;
+}
+
+.backdrop {
+	width: 100%;
+	height: auto;
+	z-index: 2;
+	opacity: 0.5;
+	vertical-align: bottom;
+}
+.overlay {
+	background-color: #000000;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.3;
+	display: block;
+}
+.media-top-navigation {
+	margin-top: 10px;
+	> button {
+		background: none;
+		border: none;
+		font-family: 'Inter', sans-serif;
+		outline: none;
+		cursor: pointer;
+		border: 2px solid #fff;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 5px 15px;
+		&:hover {
+			background: #fff;
+			color: $green-text-color;
+		}
+	}
+}
+
+.media-top-poster-info {
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	bottom: 1%;
+	left: 5%;
+	padding: 1rem;
+}
+.media-top-poster-img {
+	border-radius: 8px;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-1rem);
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.poster {
+	width: 20%;
+	animation-name: fadeIn;
+	animation-delay: 0.8s;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: backwards;
+}
+@keyframes pauseDelay {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+.info {
+	margin-left: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	animation-name: pauseDelay;
+	animation-duration: 0.5s;
+	animation-delay: 0.5s;
+	animation-timing-function: ease;
+	animation-fill-mode: backwards;
+	& li {
+		font-weight: 500;
+		line-height: 1.2;
+	}
+}
+.info-title {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	font-size: 3.5rem;
+	line-height: 1.4;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+@media (max-width: 425px) {
+	.info-title {
+		font-size: 2.2rem;
+	}
+	.info {
+		& li {
+			font-size: 1.4rem;
+		}
+	}
+	.poster {
+		width: 30%;
+	}
+	.myEyeUnSeen {
+		font-size: 2rem;
+	}
+}
+@media (min-width: 426px) {
+	.info-title {
+		font-size: 2.5rem;
+	}
+	.poster {
+		width: 30%;
+	}
+}
+@media (min-width: 768px) {
+	.info-title {
+		font-size: 3.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.poster {
+		width: 20%;
+	}
+}

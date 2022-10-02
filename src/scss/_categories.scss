@@ -1,0 +1,210 @@
+// Category Component
+.sortButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sortBtn {
+	font-size: 3.5rem;
+	transition: all 0.7s ease-in-out;
+	margin-top: 0.5rem;
+	&.fire {
+		color: lighten($primary-button-color, 10%);
+		&:hover {
+			color: lighten($primary-button-color, 20%);
+		}
+	}
+	&.star {
+		margin-left: 2rem;
+		color: $secondary-button-color;
+		&:hover {
+			color: lighten($secondary-button-color, 10%);
+		}
+	}
+}
+
+// Categories Component
+
+.caticon {
+	color: $secondary-button-color;
+	vertical-align: text-bottom;
+}
+.category-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.category-genre {
+	color: $auxiliary-text-color;
+}
+.category-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 3.5rem;
+	margin-top: 2rem;
+}
+.badge-div {
+	background-image: url('/assets/genres/actionGenreM.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 20rem;
+	border-radius: 5px;
+}
+
+// Category Backdrops - Movies
+.Action-movie {
+	background-image: url('/assets/genres/actionGenreM.jpg');
+}
+.Adventure-movie {
+	background-image: url('/assets/genres/adventureGenreM.jpg');
+}
+.Animation-movie {
+	background-image: url('/assets/genres/animationGenreM.jpg');
+}
+.Comedy-movie {
+	background-image: url('/assets/genres/comedyGenreM.jpg');
+}
+.Crime-movie {
+	background-image: url('/assets/genres/crimeGenreM.jpg');
+}
+.Documentary-movie {
+	background-image: url('/assets/genres/docoGenreM.jpg');
+}
+.Drama-movie {
+	background-image: url('/assets/genres/dramaGenreM.jpg');
+}
+.Family-movie {
+	background-image: url('/assets/genres/familyGenreM.jpg');
+}
+.Fantasy-movie {
+	background-image: url('/assets/genres/fantasyGenreM.jpg');
+}
+.History-movie {
+	background-image: url('/assets/genres/historyGenreM.jpg');
+}
+.Horror-movie {
+	background-image: url('/assets/genres/horrorGenreM.jpg');
+}
+.Music-movie {
+	background-image: url('/assets/genres/musicGenreM.jpg');
+}
+.Mystery-movie {
+	background-image: url('/assets/genres/mysteryGenreM.jpg');
+}
+.Romance-movie {
+	background-image: url('/assets/genres/romanceGenreM.jpg');
+}
+.Fiction-movie {
+	background-image: url('/assets/genres/scienceGenreM.jpg');
+}
+.Movie-movie {
+	background-image: url('/assets/genres/tvMovieGenreM.jpg');
+}
+.Thriller-movie {
+	background-image: url('/assets/genres/thrillerGenreM.jpg');
+}
+.War-movie {
+	background-image: url('/assets/genres/warGenreM.jpg');
+}
+.Western-movie {
+	background-image: url('/assets/genres/westernGenreM.jpg');
+}
+
+// Category Backdrops - Shows
+
+.Adventure-tv {
+	background-image: url('/assets/genres/actionGenreT.jpg');
+}
+.Animation-tv {
+	background-image: url('/assets/genres/animationGenreT.jpg');
+}
+.Comedy-tv {
+	background-image: url('/assets/genres/comedyGenreT.jpg');
+}
+.Crime-tv {
+	background-image: url('/assets/genres/crimeGenreT.jpg');
+}
+.Documentary-tv {
+	background-image: url('/assets/genres/docoGenreT.jpg');
+}
+.Drama-tv {
+	background-image: url('/assets/genres/dramaGenreT.jpg');
+}
+.Family-tv {
+	background-image: url('/assets/genres/familyGenreT.jpg');
+}
+.Kids-tv {
+	background-image: url('/assets/genres/kidsGenreT.jpg');
+}
+.Mystery-tv {
+	background-image: url('/assets/genres/mysteryGenreT.jpg');
+}
+.News-tv {
+	background-image: url('/assets/genres/newsGenreT.jpg');
+}
+.Reality-tv {
+	background-image: url('/assets/genres/realityGenreT.jpg');
+}
+.Fantasy-tv {
+	background-image: url('/assets/genres/scifiGenreT.jpg');
+}
+.Soap-tv {
+	background-image: url('/assets/genres/soapGenreT.jpg');
+}
+.Talk-tv {
+	background-image: url('/assets/genres/talkGenreT.jpg');
+}
+.Politics-tv {
+	background-image: url('/assets/genres/warGenreT.jpg');
+}
+.Western-tv {
+	background-image: url('/assets/genres/westernGenreT.jpg');
+}
+
+.badge-outer {
+	position: relative;
+	transition: all 0.5s ease-in-out;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+.badge-overlay {
+	background: #6b005f;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	transition: all 0.7s ease-in-out;
+	&:hover {
+		background: darken($secondary-button-color, 35%);
+	}
+}
+.badge-name {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	font-size: 2.2rem;
+	font-weight: 700;
+	color: $secondary-text-color;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: 650px) {
+	.category-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2rem;
+	}
+	.badge-name {
+		font-size: 2rem;
+	}
+}

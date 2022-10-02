@@ -1,0 +1,96 @@
+.profile-buttons,
+.pagination-buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	max-width: 85%;
+	margin: 0 auto;
+	margin-top: 0.65rem;
+	margin-bottom: 2.5rem;
+}
+.pagination-buttons {
+	margin-top: 2rem;
+}
+.favorites-btn {
+	background-color: $secondary-button-color;
+	color: $primary-text-color;
+	padding: 1.65rem 2rem;
+	border: none;
+	border-radius: 5px;
+	border-bottom: 2px darken($secondary-button-color, 10%) solid;
+	font-family: 'Darker Grotesque', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-right: 2rem;
+	width: 50%;
+	cursor: pointer;
+	transition: all 0.7s ease-in-out;
+	&:hover:not([disabled]) {
+		background-color: lighten($secondary-button-color, 10%);
+		color: $secondary-text-color;
+	}
+}
+.watchlist-btn {
+	@extend .favorites-btn;
+	background-color: $primary-button-color;
+	border-bottom: 2px darken($primary-button-color, 10%) solid;
+	margin-right: 2rem;
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+	&:hover:not(:disabled) {
+		background-color: lighten($primary-button-color, 10%);
+		color: $secondary-text-color;
+	}
+}
+.watched-btn {
+	@extend .favorites-btn;
+	background-color: $auxiliary-button-color;
+	border-bottom: 2px darken($auxiliary-button-color, 10%) solid;
+	margin-right: 0;
+	&:hover:not([disabled]) {
+		background-color: lighten($auxiliary-button-color, 5%);
+		color: $secondary-text-color;
+	}
+}
+.invite-btn {
+	@extend .favorites-btn;
+	background-color: #1c15d6;
+	border-bottom: 2px darken(#1c15d6, 10%) solid;
+	margin-right: 0;
+	&:hover {
+		background-color: lighten(#1c15d6, 5%);
+		color: $secondary-text-color;
+	}
+}
+@media (max-width: 600px) {
+	.profile-buttons,
+	.pagination-buttons {
+		flex-direction: column;
+		margin-bottom: 0;
+		align-items: center;
+	}
+	.profile-buttons {
+		margin-bottom: 2rem;
+	}
+	.favorites-btn,
+	.watchlist-btn,
+	.watched-btn {
+		width: 100%;
+	}
+
+	.favorites-btn {
+		margin-bottom: 2.5rem;
+		margin-right: 0;
+	}
+	.watched-btn {
+		margin-bottom: 0;
+	}
+	.button-outer-container {
+		justify-content: center;
+		align-items: center;
+	}
+}

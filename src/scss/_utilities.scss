@@ -1,0 +1,39 @@
+// A completely unstyled button for icon use
+.unBtn {
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	&:disabled {
+		opacity: 45%;
+		cursor: default;
+	}
+}
+
+.btn {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.container {
+	margin: 2rem;
+	margin-bottom: 4rem;
+	min-height: 100vh;
+}
+.pink-span {
+	font-family: 'Inter', sans-serif;
+	color: $auxiliary-text-color;
+}
+.green-span {
+	color: $green-text-color;
+}
+.pugalicious {
+	@media (min-width: 600px) {
+		width: 50%;
+	}
+	@media (min-width: 769px) {
+		width: 30%;
+	}
+}

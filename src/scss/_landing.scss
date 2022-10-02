@@ -1,0 +1,49 @@
+.landing-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 4fr);
+	grid-gap: 2rem;
+	margin-top: 2rem;
+}
+.more {
+	color: $secondary-button-color;
+	font-size: 3rem;
+	vertical-align: sub;
+	margin-left: 0.25rem;
+	animation-name: Pulse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+.favCrown {
+	@extend .more;
+	color: $primary-button-color;
+	vertical-align: baseline;
+}
+@media (max-width: 425px) {
+	.landing-grid {
+		grid-template-columns: repeat(2, 10fr);
+	}
+}
+@media (min-width: 426px) {
+	.landing-grid {
+		grid-template-columns: repeat(4, 5fr);
+	}
+}
+@media (min-width: 768px) {
+	.landing-grid {
+		grid-template-columns: repeat(5, 4fr);
+	}
+}
+@keyframes Pulse {
+	0% {
+		color: $secondary-button-color;
+	}
+	50% {
+		color: lighten($secondary-button-color, 15%);
+	}
+	80% {
+		color: lighten($secondary-button-color, 20%);
+	}
+	100% {
+		color: lighten($secondary-button-color, 25%);
+	}
+}

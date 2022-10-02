@@ -1,0 +1,66 @@
+// Color for application
+
+// Dark Theme Color Set
+
+$primary-bg-color: #242424;
+$primary-nav-color: #d100b9;
+$primary-button-color: #5b009c;
+$secondary-button-color: #d100b9;
+$auxiliary-button-color: #009985;
+$primary-text-color: #fff;
+$secondary-text-color: #ededed;
+$auxiliary-text-color: #ff45e9;
+//$auxiliary-text-color: #d100b9;
+$green-text-color: #009985;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	background-color: $primary-bg-color;
+	color: $primary-text-color;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 200;
+	line-height: 1.6;
+	min-height: 100vh;
+}
+a {
+	text-decoration: none;
+	color: $primary-text-color;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+	font-size: 62.5%;
+}
+ul,
+li {
+	list-style: none;
+}
+img {
+	width: 100%;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: $primary-button-color;
+	color: $secondary-text-color;
+}
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
