@@ -212,20 +212,29 @@ const AppRouter = () => {
 										</div>
 									}>
 									<Navbar />
-									<Switch>
-										<Route exact path='/' component={Home} />
-										<Route path='/trending' component={Trending} />
+									<FavoriteState>
+										<WatchedState>
+											<Switch>
+												<Route exact path='/' component={Home} />
+												<Route path='/trending' component={Trending} />
 
-										<Route path='/pages/:media_id/:page' component={Pages} />
-										<Route path='/search/:search_string' component={Search} />
-										<Route exact path='/categories' component={Categories} />
-										<Route
-											path='/categories/:media_id/:genre_id/:genre_name/:page'
-											component={Category}
-										/>
-
-										<FavoriteState>
-											<WatchedState>
+												<Route
+													path='/pages/:media_id/:page'
+													component={Pages}
+												/>
+												<Route
+													path='/search/:search_string'
+													component={Search}
+												/>
+												<Route
+													exact
+													path='/categories'
+													component={Categories}
+												/>
+												<Route
+													path='/categories/:media_id/:genre_id/:genre_name/:page'
+													component={Category}
+												/>
 												<Route path='/media/:type/:id' component={Media} />
 												<PrivateRoute
 													exact
@@ -245,9 +254,9 @@ const AppRouter = () => {
 												/>
 												<PrivateRoute path='/people' component={People} />
 												<Route path='*' component={NotFound} />
-											</WatchedState>
-										</FavoriteState>
-									</Switch>
+											</Switch>
+										</WatchedState>
+									</FavoriteState>
 									<Footer />
 								</Suspense>
 							</FiltersState>
