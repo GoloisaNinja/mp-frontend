@@ -59,6 +59,7 @@ const Watched = lazy(() => import('../Components/watched/Watched'));
 const Watchlists = lazy(() => import('../Components/watchlists/Watchlists'));
 const Watchlist = lazy(() => import('../Components/watchlists/Watchlist'));
 const People = lazy(() => import('../Components/people/People'));
+const NotFound = lazy(() => import('../Components/NotFound'));
 
 const AppRouter = () => {
 	const initialState = {
@@ -243,6 +244,7 @@ const AppRouter = () => {
 													component={Watchlist}
 												/>
 												<PrivateRoute path='/people' component={People} />
+												<Route path='*' component={NotFound} />
 											</WatchedState>
 										</FavoriteState>
 									</Switch>
