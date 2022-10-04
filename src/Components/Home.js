@@ -3,15 +3,19 @@ import { Redirect } from 'react-router-dom';
 import authContext from '../context/auth/authContext';
 import LoginForm from './auth/LoginForm';
 import RegistrationForm from './auth/RegistrationForm';
+import Loading from './Loading';
 import Seo from './Seo';
 
 const Home = () => {
 	const [login, setAuthType] = useState(true);
-	const { loginUser, isAuthenticated, registerUser } = useContext(authContext);
+	const { loginUser, isAuthenticated, registerUser, loading } =
+		useContext(authContext);
 	if (isAuthenticated) {
 		return <Redirect to='/trending' />;
 	}
-	return (
+	return loading ? (
+		<Loading />
+	) : (
 		<>
 			<Seo
 				lang={`en`}
